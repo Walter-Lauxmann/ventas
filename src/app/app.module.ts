@@ -16,6 +16,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
+import { SubirArchivosService } from './servicios/subir-archivos.service';
+
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ListaProductosComponent } from './productos/lista-productos/lista-productos.component';
 import { DetalleProductosComponent } from './productos/detalle-productos/detalle-productos.component';
@@ -42,7 +44,9 @@ import { DetalleProductosComponent } from './productos/detalle-productos/detalle
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [
+    SubirArchivosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,10 @@
+<div class="example-button-container">
+    <a [routerLink]="['detalle-producto/', 0]">
+        <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+            <mat-icon>add</mat-icon>
+        </button>
+    </a>
+</div>
 <section>
     <h2>Lista de Equipos</h2>
     <div class="row">
@@ -13,22 +20,27 @@
                         </h2>
                     </mat-card-subtitle>
                 </mat-card-header>
-                <img mat-card-image src="http://localhost/api/modelos/img/productos/{{producto.imagen}}" alt="{{producto.nombre}}">
+                <img mat-card-image src="http://localhost/api/modelos/img/productos/{{producto.imagen}}"
+                    alt="{{producto.nombre}}">
                 <mat-card-content>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">memory</mat-icon> | 
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">sd_storage</mat-icon> | 
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">memory</mat-icon> |
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">sd_storage</mat-icon> |
                     <mat-icon aria-hidden="false" aria-label="Example home icon">camera_alt</mat-icon> |
                     <mat-icon aria-hidden="false" aria-label="Example home icon">stay_primary_portrait</mat-icon> <br />
                     {{producto.descripcion}} <br />
                     <h3></h3>
                 </mat-card-content>
                 <mat-card-actions>
-                    <a [routerLink]="['detalle-producto/', producto.id]"><button mat-raised-button color="primary"><mat-icon>thumb_up_alt</mat-icon> LIKE</button></a>
-                    <button mat-raised-button color="warn"><mat-icon>share</mat-icon> SHARE</button>
+                    <a [routerLink]="['detalle-producto/', producto.id]">
+                        <button mat-raised-button color="primary">
+                            <mat-icon>edit</mat-icon> 
+                        </button>
+                    </a>
+                    <button mat-raised-button color="warn">
+                        <mat-icon>shopping_cart</mat-icon> 
+                    </button>
                 </mat-card-actions>
             </mat-card>
         </div>
-
     </div>
-
 </section>
